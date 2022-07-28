@@ -1,0 +1,57 @@
+@use 'variables' as *;
+
+.hall {
+    margin-bottom: 20px;
+    perspective: 1000px;
+}
+
+.screen { 
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+    transform: rotateX(-45deg);
+    margin-bottom: 10px;
+}
+
+.seat {
+    background-color: $colorSeatDefault;
+    height: $seatWidth - $seatMargin;
+    width: $seatWidth;
+    margin: $seatMargin;
+    border-top-left-radius: $seatWidth * 0.66666666666666666;
+    border-top-right-radius: $seatWidth * 0.66666666666666666;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &s-row {
+        display: flex;
+    }
+
+    &:nth-of-type(2) {
+        margin-right: $seatWidth + $seatMargin;
+    }
+
+    &:nth-last-of-type(2) {
+        margin-left: $seatWidth + $seatMargin;
+    }
+    &--selected {
+        background-color: $colorSeatSelected;
+    }
+    &--occupied {
+        background-color: $colorSeatOccupied;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &:hover {
+        transform: scale(1.2); 
+    }
+}
+
+.legend-list {
+    .seat {
+        cursor: default;
+        pointer-events: none;
+    }
+}

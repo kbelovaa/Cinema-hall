@@ -1,0 +1,21 @@
+.legend {
+    &-list {
+        background-color: rgba(0,0,0,0.1);
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #777;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+        }
+    }
+    &-description {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+.movie-picker {
+    background-color: #fff;
+    border: 0;
+    border-radius: $moviePickerBaseSize;
+    font-size: 14px;
+    padding: $moviePickerBaseSize 3 * $moviePickerBaseSize;
+    margin-left: 10px;
+
+    &-container {
+        margin-bottom: 20px;
+    }
+}
